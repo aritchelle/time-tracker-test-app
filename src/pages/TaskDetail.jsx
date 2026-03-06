@@ -20,11 +20,11 @@ export default function TaskDetail() {
         <div className="page">
             <nav className="navbar">
                 <div className="nav-brand" onClick={() => navigate('/dashboard')} style={{ cursor: 'pointer' }}>📋 TaskTrack</div>
-                <div className="nav-right">
-                    <div className="grid flex-1 text-left">
-                        <span className="font-medium">{user?.email}</span>
+                <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', justifyContent: 'space-between' }}>
+                    <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
+                        <Link to="/tasks" className="btn-ghost" style={{ padding: '0.4rem 0.8rem' }}>← Back</Link>
+                        <h1>Task Details</h1>
                     </div>
-                    <button className="btn-ghost" onClick={() => { logout(); navigate('/sign-in') }}>Logout</button>
                 </div>
             </nav>
 

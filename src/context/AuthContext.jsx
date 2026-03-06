@@ -3,15 +3,13 @@ import { createContext, useContext, useState } from 'react'
 const AuthContext = createContext(null)
 
 export function AuthProvider({ children }) {
-    const [user, setUser] = useState(null)
+    // Keep a mock user so the app components don't break when checking user.email
+    const [user, setUser] = useState({ email: 'user@example.com' })
 
     function login(email, password) {
-        // Simulated login — no real auth
-        if (password === 'test123') {
-            setUser({ email })
-            return true
-        }
-        return false
+        // Stub
+        setUser({ email })
+        return true
     }
 
     function logout() {
